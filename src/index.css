@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* Custom design tokens. Each one becomes a set of utilities:
+   --color-page → bg-page, text-page, border-page …
+   --font-display → font-display */
+@theme {
+  --color-page: #F4F1EA;
+  --color-column: #EBE6DB;
+  --color-ink: #1E1C18;
+  --color-muted: #5E5A52;
+  --color-line: #DDD6C8;
+  --color-field: #D6CFBF;
+  --color-accent: #2F5D50;
+  --color-accent-hover: #244A40;
+  --color-danger: #B3261E;
+
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+}
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    background-color: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+}
